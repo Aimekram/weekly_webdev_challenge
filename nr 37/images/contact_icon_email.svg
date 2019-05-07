@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 42" width="54" height="42">
+	<defs>
+		<image width="54" height="42" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NCA0MiIgd2lkdGg9IjU0IiBoZWlnaHQ9IjQyIj4KCTxkZWZzPgoJCTxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNwMSI+CgkJCTxwYXRoIGQ9Ik0wIDBMNTQgMEw1NCA0MkwwIDQyWiIgLz4KCQk8L2NsaXBQYXRoPgoJPC9kZWZzPgoJPHN0eWxlPgoJCXRzcGFuIHsgd2hpdGUtc3BhY2U6cHJlIH0KCQkuc2hwMCB7IGZpbGw6ICM0MjQyNDIgfSAKCTwvc3R5bGU+Cgk8ZyBpZD0iUGFnZSAxIiBjbGlwLXBhdGg9InVybCgjY3AxKSI+CgkJPHBhdGggaWQ9IlBhdGggMSIgY2xhc3M9InNocDAiIGQ9Ik01NCw1djMyYzAsMi43NiAtMi4yNCw1IC01LDVoLTQ0Yy0yLjc2LDAgLTUsLTIuMjQgLTUsLTV2LTMyYzAsLTIuNzYgMi4yNCwtNSA1LC01aDQ0YzIuNzYsMCA1LDIuMjQgNSw1ek01Miw1YzAsLTEuNjUgLTEuMzUsLTMgLTMsLTNoLTQ0Yy0xLjY1LDAgLTMsMS4zNSAtMywzdjMyYzAsMS42NSAxLjM1LDMgMywzaDQ0YzEuNjUsMCAzLC0xLjM1IDMsLTN6TTQ5Ljc2LDQuMzVjMC4zNiwwLjQyIDAuMzIsMS4wNSAtMC4xLDEuNDFsLTE4Ljk3LDE2LjM5Yy0xLjAxLDAuODggLTIuMzUsMS4zMiAtMy42OCwxLjMyYy0xLjMzLDAgLTIuNjcsLTAuNDQgLTMuNjgsLTEuMzJsLTE4Ljk3LC0xNi4zOWMtMC40MiwtMC4zNiAtMC40NywtMC45OSAtMC4xLC0xLjQxYzAuMzYsLTAuNDIgMC45OSwtMC40NiAxLjQxLC0wLjFsMTguOTcsMTYuMzljMS4yOSwxLjExIDMuNDYsMS4xMSA0Ljc1LDBsMTguOTcsLTE2LjM5YzAuNDEsLTAuMzYgMS4wNSwtMC4zMiAxLjQxLDAuMXoiIC8+Cgk8L2c+Cjwvc3ZnPg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="PSDFreebies.com">
+		<g id="Get in touch">
+			<g id="Email">
+				<use id="Icon" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+			</g>
+		</g>
+	</g>
+</svg>
