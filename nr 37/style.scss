@@ -27,11 +27,28 @@ body {
 
 section {
     min-height: 40vh;
-    padding: 10vw;
+    padding: 5vw 10vw;
+    z-index: 1;
+    
+    div, h2, h3, h4, p {
+        z-index: 3;
+    }
 }
 
 section:nth-child(2n+2) {
     background-color: #f5f5f5;
+}
+
+.svg_container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    svg {
+        position: absolute;
+        z-index: 2;
+    }
 }
 
 h1 {
@@ -162,6 +179,16 @@ header {
         width: 3.5em;
         margin: 1em;
     }
+    
+    .svg_container {
+        .left {
+            top: 20vw;
+            left: -10vw;
+            height: 15vw;
+            width: 10vw;
+            fill: $primary-color;
+        }
+    }
 }
 
 //-------------------------------------process------------------
@@ -204,6 +231,17 @@ header {
             margin: 1em auto;
         }
     }
+    
+    
+    .svg_container {
+        .right {
+            top: -5vw;
+            right: -10vw;
+            height: 26vw;
+            width: 30vw;
+            fill: $primary-color;
+        }
+    }
 }
 
 
@@ -217,7 +255,7 @@ header {
     
     .quot {
         display: flex;
-        max-width: 760px;
+        max-width: 780px;
             
         .quotationmark {
             width: 3em;
@@ -244,14 +282,31 @@ header {
         }
     }
     
-
+    .svg_container {
+        .rightcorner {
+            top: -5vw;
+            right: -10vw;
+            height: 18vw;
+            width: 18vw;
+            fill: #000;
+        }
+        
+        .left {
+            top: calc(-10vw - 20px);
+            left: -10vw;
+            height: 60vw;
+            width: 26vw;
+            fill: $primary-color;
+            visibility: hidden;
+        }
+    }
 }
 
 
 //-------------------------------------footer------------------
 
 footer {
-    padding: 5vh 10vw;
+    padding: 5vw 10vw;
     background-color: #171717;
     color: $bg-color;
     
@@ -268,6 +323,7 @@ footer {
     hr {
         width: 65%;
         margin: 20px auto;
+        border: 1px solid $bg-color;
     }
     
     .pure-g {
@@ -316,13 +372,15 @@ footer {
     }
     
     .svg_container {
-        position: relative;
-        right: 0;
+        position: relative; 
         
         svg {
             position: absolute;
-            width: 300px;
-            fill: red;
+            bottom: -5vw;
+            right: -10vw;
+            height: 12vw;
+            width: 20vw;
+            fill: $primary-color;
         }
     }
     
@@ -340,7 +398,13 @@ footer {
         .bigphoto {
             width: 140%;
             margin: 0 0 0 -40px;
-        }  
+        } 
+        
+        .svg_container {
+            .left {
+                visibility: visible;
+            }
+        }
     }
     
     footer {
@@ -357,6 +421,13 @@ footer {
                 margin-top: 1em;
                 padding: 0;
                 text-align: center;
+            }
+        }
+        
+        .svg_container {
+            svg {
+                right: -5vw;
+                bottom: -5vw;
             }
         }
     }
@@ -433,6 +504,12 @@ footer {
     
     footer {
         padding: 5vw 10vw;
+        
+        .svg_container {
+            svg {
+                right: -10vw;
+            }
+        }
         
         .pure-g {
             font-size: 17px; 

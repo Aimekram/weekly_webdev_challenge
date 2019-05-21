@@ -41,10 +41,22 @@ body {
 
 section {
   min-height: 40vh;
-  padding: 10vw; }
+  padding: 5vw 10vw;
+  z-index: 1; }
+  section div, section h2, section h3, section h4, section p {
+    z-index: 3; }
 
 section:nth-child(2n+2) {
   background-color: #f5f5f5; }
+
+.svg_container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%; }
+  .svg_container svg {
+    position: absolute;
+    z-index: 2; }
 
 h1 {
   font-size: 43px;
@@ -131,6 +143,12 @@ header {
 .services .services_icon {
   width: 3.5em;
   margin: 1em; }
+.services .svg_container .left {
+  top: 20vw;
+  left: -10vw;
+  height: 15vw;
+  width: 10vw;
+  fill: #bb2d39; }
 
 .process .process_blocks {
   margin: 2em 0;
@@ -160,12 +178,18 @@ header {
     background-position: center;
     height: 150px;
     margin: 1em auto; }
+.process .svg_container .right {
+  top: -5vw;
+  right: -10vw;
+  height: 26vw;
+  width: 30vw;
+  fill: #bb2d39; }
 
 .clients .bigphoto {
   width: 70%; }
 .clients .quot {
   display: flex;
-  max-width: 760px; }
+  max-width: 780px; }
   .clients .quot .quotationmark {
     width: 3em;
     height: 100%;
@@ -180,9 +204,22 @@ header {
   text-align: center; }
   .clients .smphoto_container .smphoto {
     width: 4.5em; }
+.clients .svg_container .rightcorner {
+  top: -5vw;
+  right: -10vw;
+  height: 18vw;
+  width: 18vw;
+  fill: #000; }
+.clients .svg_container .left {
+  top: calc(-10vw - 20px);
+  left: -10vw;
+  height: 60vw;
+  width: 26vw;
+  fill: #bb2d39;
+  visibility: hidden; }
 
 footer {
-  padding: 5vh 10vw;
+  padding: 5vw 10vw;
   background-color: #171717;
   color: #fafafa; }
   footer h2 {
@@ -193,7 +230,8 @@ footer {
     margin-bottom: 5px; }
   footer hr {
     width: 65%;
-    margin: 20px auto; }
+    margin: 20px auto;
+    border: 1px solid #fafafa; }
   footer .pure-g {
     padding-left: 15vw;
     margin: auto;
@@ -224,12 +262,14 @@ footer {
       padding: 0 1em;
       margin: 5px 0; }
   footer .svg_container {
-    position: relative;
-    right: 0; }
+    position: relative; }
     footer .svg_container svg {
       position: absolute;
-      width: 300px;
-      fill: red; }
+      bottom: -5vw;
+      right: -10vw;
+      height: 12vw;
+      width: 20vw;
+      fill: #bb2d39; }
 
 @media only screen and (min-width: 568px) {
   body {
@@ -238,6 +278,8 @@ footer {
   .clients .bigphoto {
     width: 140%;
     margin: 0 0 0 -40px; }
+  .clients .svg_container .left {
+    visibility: visible; }
 
   footer {
     padding: 5vw; }
@@ -248,7 +290,10 @@ footer {
       footer .contact_item .contact_details {
         margin-top: 1em;
         padding: 0;
-        text-align: center; } }
+        text-align: center; }
+    footer .svg_container svg {
+      right: -5vw;
+      bottom: -5vw; } }
 @media only screen and (min-width: 768px) {
   body {
     text-align: left;
@@ -289,6 +334,8 @@ footer {
 
   footer {
     padding: 5vw 10vw; }
+    footer .svg_container svg {
+      right: -10vw; }
     footer .pure-g {
       font-size: 17px; }
     footer .contact_item {
