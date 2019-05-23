@@ -22,6 +22,8 @@ time, mark, audio, video {
 
 * {
   box-sizing: border-box; }
+  *::before, *::after {
+    box-sizing: border-box; }
 
 ul {
   list-style: none; }
@@ -49,12 +51,12 @@ section {
 section:nth-child(2n+2) {
   background-color: #f5f5f5; }
 
-.svg_container {
+.svg-container {
   position: relative;
   z-index: 2;
   width: 100%;
   height: 100%; }
-  .svg_container svg {
+  .svg-container svg {
     position: absolute;
     z-index: 2; }
 
@@ -93,10 +95,15 @@ span {
   color: #fafafa;
   text-transform: uppercase;
   padding: 10px 20px;
+  width: fit-content;
   border: none;
   border-radius: 20px;
   font-weight: 600;
-  font-size: 21px; }
+  font-size: 21px;
+  box-shadow: 0 0 0.8em grey;
+  transition: all 0.3s cubic-bezier(0.65, -0.25, 0.25, 1.95); }
+  .button:hover, .button:focus .button:active {
+    letter-spacing: 0.08rem; }
 
 .pure-g [class*=pure-u] {
   font-family: Lato, "Open Sans", sans-serif; }
@@ -132,9 +139,24 @@ header {
   .home .guyimg {
     height: 30vh; }
 
-.about img {
-  width: 100%;
-  margin: 50px 0; }
+.about {
+  justify-content: space-between; }
+  .about .text {
+    max-width: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around; }
+  .about img {
+    width: 100%;
+    margin: 50px 0; }
+  .about .svg-container {
+    z-index: -1; }
+    .about .svg-container .blackhalf {
+      top: -5vw;
+      right: -10vw;
+      height: 80vh;
+      width: 60vw;
+      fill: #000; }
 
 .services .services_block {
   padding: 1em; }
@@ -143,11 +165,11 @@ header {
 .services .services_icon {
   width: 3.5em;
   margin: 1em; }
-.services .svg_container .left {
+.services .svg-container .left {
   top: 20vw;
   left: -10vw;
-  height: 15vw;
-  width: 10vw;
+  height: 20vw;
+  width: 6vw;
   fill: #bb2d39; }
 
 .process .process_blocks {
@@ -178,12 +200,36 @@ header {
     background-position: center;
     height: 150px;
     margin: 1em auto; }
-.process .svg_container .right {
+.process .svg-container .right {
   top: -5vw;
   right: -10vw;
   height: 26vw;
-  width: 30vw;
+  width: 40vw;
   fill: #bb2d39; }
+.process .svg-container .leftcorner {
+  top: -8vw;
+  left: -10vw;
+  height: 26vw;
+  width: 10vw;
+  fill: #000; }
+
+.team h2 {
+  text-align: center; }
+.team .slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0; }
+  .team .slider-container img {
+    width: 70%; }
+.team .svg-container {
+  width: 5vw; }
+  .team .svg-container svg {
+    position: relative; }
+  .team .svg-container .arrow {
+    height: 10vw;
+    width: 5vw;
+    fill: grey; }
 
 .clients .bigphoto {
   width: 70%; }
@@ -200,17 +246,17 @@ header {
   .clients .quot .quot_author {
     font-weight: 700;
     text-align: right; }
-.clients .smphoto_container {
+.clients .smphoto-container {
   text-align: center; }
-  .clients .smphoto_container .smphoto {
+  .clients .smphoto-container .smphoto {
     width: 4.5em; }
-.clients .svg_container .rightcorner {
+.clients .svg-container .rightcorner {
   top: -5vw;
   right: -10vw;
   height: 18vw;
   width: 18vw;
   fill: #000; }
-.clients .svg_container .left {
+.clients .svg-container .left {
   top: calc(-10vw - 20px);
   left: -10vw;
   height: 60vw;
@@ -261,9 +307,9 @@ footer {
     footer .copyrights span {
       padding: 0 1em;
       margin: 5px 0; }
-  footer .svg_container {
+  footer .svg-container {
     position: relative; }
-    footer .svg_container svg {
+    footer .svg-container svg {
       position: absolute;
       bottom: -5vw;
       right: -10vw;
@@ -278,7 +324,7 @@ footer {
   .clients .bigphoto {
     width: 140%;
     margin: 0 0 0 -40px; }
-  .clients .svg_container .left {
+  .clients .svg-container .left {
     visibility: visible; }
 
   footer {
@@ -291,7 +337,7 @@ footer {
         margin-top: 1em;
         padding: 0;
         text-align: center; }
-    footer .svg_container svg {
+    footer .svg-container svg {
       right: -5vw;
       bottom: -5vw; } }
 @media only screen and (min-width: 768px) {
@@ -307,6 +353,8 @@ footer {
   .services .services_icon {
     margin: 0 1em 0 0; }
 
+  .clients h2 {
+    padding-left: 6vw; }
   .clients .pure-g {
     align-items: center; }
   .clients .bigphoto {
@@ -318,7 +366,7 @@ footer {
       margin: 2em 0; }
     .clients .quot .quot_author {
       text-align: left; }
-    .clients .quot .smphoto_container {
+    .clients .quot .smphoto-container {
       text-align: left;
       padding-left: 1em; }
 
@@ -334,7 +382,7 @@ footer {
 
   footer {
     padding: 5vw 10vw; }
-    footer .svg_container svg {
+    footer .svg-container svg {
       right: -10vw; }
     footer .pure-g {
       font-size: 17px; }

@@ -39,7 +39,7 @@ section:nth-child(2n+2) {
     background-color: #f5f5f5;
 }
 
-.svg_container {
+.svg-container {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -87,16 +87,31 @@ span {
     font-family: $font-stack;
 }
 
+@mixin transition($property: all, $duration: 0.5s, $ease: cubic-bezier(0.65,-0.25,0.25, 1.95)) {
+      transition: $property $duration $ease;
+}
+
 .button {
-    background-color:  $primary-color;
+    background-color: $primary-color;
     color: $bg-color;
     text-transform: uppercase;
     padding: 10px 20px;
+    width: fit-content;
     border: none;
     border-radius: 20px;
     font-weight: 600;
     font-size: 21px;
+    box-shadow: 0 0 0.8em grey;
+    @include transition(all, 0.3s, cubic-bezier(0.65,-0.25,0.25,1.95));
+    
+    &:hover, &:focus &:active {
+        letter-spacing: 0.08rem;
+        
+    }
+
 }
+
+
 
 .pure-g [class*=pure-u] {
     font-family: $font-stack;
@@ -156,9 +171,30 @@ header {
 //-------------------------------------about------------------
 
 .about {
+    justify-content: space-between;
+    
+    .text {
+        max-width: 500px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    
     img {
         width: 100%;
         margin: 50px 0;
+    }
+    
+    .svg-container {
+        z-index: -1;
+        
+        .blackhalf {
+            top: -5vw;
+            right: -10vw;
+            height: 80vh;
+            width: 60vw;
+            fill: #000;
+        }
     }
 }
 
@@ -180,12 +216,12 @@ header {
         margin: 1em;
     }
     
-    .svg_container {
+    .svg-container {
         .left {
             top: 20vw;
             left: -10vw;
-            height: 15vw;
-            width: 10vw;
+            height: 20vw;
+            width: 6vw;
             fill: $primary-color;
         }
     }
@@ -233,13 +269,55 @@ header {
     }
     
     
-    .svg_container {
+    .svg-container {
         .right {
             top: -5vw;
             right: -10vw;
             height: 26vw;
-            width: 30vw;
+            width: 40vw;
             fill: $primary-color;
+        }
+        
+        .leftcorner {
+            top: -8vw;
+            left: -10vw;
+            height: 26vw;
+            width: 10vw;
+            fill: #000;
+        }
+    }
+}
+
+//-------------------------------------team------------------
+
+.team {
+    h2 {
+        text-align: center;
+    }
+    
+    .slider-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+        
+        img {
+            width: 70%;
+        }
+    }
+    
+    .svg-container {
+        width: 5vw;
+        
+        svg {
+            position: relative;
+        }
+        
+        .arrow {
+//            top: 0;
+            height: 10vw;
+            width: 5vw;
+            fill: grey;
         }
     }
 }
@@ -274,7 +352,7 @@ header {
         }
     }
     
-    .smphoto_container {
+    .smphoto-container {
         text-align: center;
         
         .smphoto {
@@ -282,7 +360,7 @@ header {
         }
     }
     
-    .svg_container {
+    .svg-container {
         .rightcorner {
             top: -5vw;
             right: -10vw;
@@ -371,7 +449,7 @@ footer {
         }
     }
     
-    .svg_container {
+    .svg-container {
         position: relative; 
         
         svg {
@@ -400,7 +478,7 @@ footer {
             margin: 0 0 0 -40px;
         } 
         
-        .svg_container {
+        .svg-container {
             .left {
                 visibility: visible;
             }
@@ -424,7 +502,7 @@ footer {
             }
         }
         
-        .svg_container {
+        .svg-container {
             svg {
                 right: -5vw;
                 bottom: -5vw;
@@ -457,6 +535,10 @@ footer {
     }
     
    .clients { 
+       h2 {
+           padding-left: 6vw;
+       }
+       
        .pure-g {
            align-items: center;
        }
@@ -477,7 +559,7 @@ footer {
                text-align: left;
            }
            
-          .smphoto_container {
+          .smphoto-container {
               text-align: left;
               padding-left: 1em;
            }
@@ -505,7 +587,7 @@ footer {
     footer {
         padding: 5vw 10vw;
         
-        .svg_container {
+        .svg-container {
             svg {
                 right: -10vw;
             }

@@ -52,7 +52,12 @@
     
     
     <section id="about" class="about pure-g">
-        <div class="pure-u-1 pure-u-sm-1-2">
+        <div class="svg-container">
+            <svg preserveAspectRatio="none" viewBox="0 0 200 100" class="blackhalf">
+                <polygon points="0,0 200,0 200,50 110,100 80,100" />
+            </svg>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2 text">
             <h2>Who we are</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             <a href="#" class="button">Read more</a>
@@ -64,9 +69,9 @@
     
     
     <section id="services" class="services">
-        <div class="svg_container" id="left_container">
-            <svg preserveAspectRatio="none" viewBox="0 0 100 200" class="left">
-                <polygon points="0,0 50,100 0,200" />
+        <div class="svg-container" id="left-container">
+            <svg preserveAspectRatio="none" viewBox="0 0 100 200" class="left" id="leftxs">
+                <polygon points="0,0 100,100 0,200" />
             </svg>
         </div>
         <h2>What we do</h2>
@@ -119,7 +124,7 @@
     
     
     <section id="process" class="process">
-        <div class="svg_container" id="right_container">
+        <div class="svg-container" id="right-container">
             <svg preserveAspectRatio="none" viewBox="0 0 200 600" class="right" id="right">
                 <polygon points="200,0 0,300 200,600" />
             </svg>
@@ -147,23 +152,43 @@
                 </div>
             </div>
         </div>
-    </section>
-    
-    
-    <section id="team">
-        <h2>Our creative team</h2>
-        <div>SLIDER WOWOWOW
+        <div class="svg-container">
+            <svg preserveAspectRatio="none" viewBox="0 0 100 100" class="leftcorner">
+                <polygon points="0,0 100,50 0,100" />
+            </svg>
         </div>
     </section>
     
     
-    <section class="clients" id="clients">
-        <div class="svg_container">
+    <section id="team" class="team">
+        <h2>Our creative team</h2>
+        <div class="slider-container">
+            <div class="svg-container">
+                <svg preserveAspectRatio="none" viewBox="0 0 100 200" class="arrow leftarrow" id="leftarrow">
+                    <polygon points="100,0 0,100 100,200" />
+                </svg>
+            </div>
+            <div>
+                <img src="images/team_photo.png" alt="A picture of a team member">
+                <p>SLIDER WOWOWOW</p>
+            </div>
+            
+            <div class="svg-container">
+                <svg preserveAspectRatio="none" viewBox="0 0 100 200" class="arrow rightarrow" id="rightarrow">
+                    <polygon points="0,0 100,100 0,200" />
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="clients" class="clients">
+        <div class="svg-container">
             <svg preserveAspectRatio="none" viewBox="0 0 100 100" class="rightcorner">
                 <polygon points="0,0 100,0 100,100" />
             </svg>
         </div>
-        <div class="svg_container" id="left_container">
+        <div class="svg-container" id="left-container">
             <svg preserveAspectRatio="none" viewBox="0 0 200 600" class="left" id="left">
                 <polygon points="0,0 200,300 0,600" />
             </svg>
@@ -181,7 +206,7 @@
                             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                             <p class="quot_author">Jinny Snow, Company CEO</p>
                         </div>
-                        <div class="smphoto_container">
+                        <div class="smphoto-container">
                             <img src="images/client_photo_small.png" alt="another client's photo" class="smphoto">
                             <img src="images/client_photo_small.png" alt="another client's photo" class="smphoto">
                             <img src="images/client_photo_small.png" alt="another client's photo" class="smphoto">
@@ -241,7 +266,7 @@
             <span>Copyright © 2017. PSDFreebies.com</span>
             <span>Best PSD Template for freelancer and agencies</span>
         </div>
-        <div class="svg_container">
+        <div class="svg-container">
             <svg preserveAspectRatio="none" viewBox="0 0 200 120">
                 <polygon points="0,120 120,0 200,100 200,120"/>
             </svg>
