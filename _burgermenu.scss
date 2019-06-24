@@ -1,0 +1,73 @@
+.menu-btn {
+    display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.navicon {
+    background: $bg-color;
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    transition: background .2s ease-out;
+    width: 1.5em;
+}
+
+.navicon:before, .navicon:after {
+    background: $bg-color;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;  
+}
+
+.navicon:before {
+    top: -8px;
+}
+
+.navicon:after {
+    top: 8px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.menu {
+    position: absolute;
+    justify-content: space-around;
+    padding: 1rem;
+    top: 15vh;
+    right: 0;
+    height: 70vh;
+    width: 100vw;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translateX(100vw);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);    
+}
+
+.menu-btn:checked ~ ul
+{
+  transform: none;
+}
