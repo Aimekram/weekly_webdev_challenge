@@ -91,7 +91,7 @@ h1 {
 h2 {
     font-family: "Peace Sans", $font-stack;
     font-size: 2.6rem;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 .5rem -60px;
     font-weight: 500;
     @include notselectable;
 }
@@ -151,6 +151,28 @@ img {
     font-family: $font-stack;
 }
 
+h2.show-on-scroll {
+    opacity: 0;
+    transition: all .5s .25s ease-out;
+    will-change: transform, opacity;
+}
+
+h2.is-visible {
+  opacity: 1;
+  transform: translateX(30px);
+}
+
+.show-on-scroll {
+    opacity: 0;
+    transition: opacity .5s .5s ease-out;
+    will-change: opacity;
+}
+
+.is-visible {
+    opacity: 1;
+}
+
+
 //-------------------------------------header------------------
 
 header {
@@ -196,7 +218,7 @@ header {
         .icons {
             position: absolute;
             left: 20px;
-            top: 88vh;
+            top: 85vh;
             background-color: transparent;
                         
             svg {
@@ -246,7 +268,7 @@ header {
             font-family: LemonMilk;
             font-size: 15vw;
             line-height: 16vw;
-            margin-top: 25vh;            
+            margin: 25vh 0 .5rem 0;            
         }
     }
     
@@ -1108,7 +1130,7 @@ footer {
     }
 }  
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-height: 1366px) {
     html {
         font-size: 20px;
     }
@@ -1251,4 +1273,20 @@ footer {
             left: calc(50% - 315px);
         }
     }
+}
+
+
+//------------------------------ipadPRO
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+      .home {
+          overflow: hidden;
+          
+          .guyimg {
+              width: 60vw;
+              top: 40vh;
+          }
+      }
 }
