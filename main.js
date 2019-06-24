@@ -34,6 +34,7 @@ function changeHeight() {
 
 
 changeHeight();
+window.onload = changeHeight;
 window.onresize = changeHeight;
 
 
