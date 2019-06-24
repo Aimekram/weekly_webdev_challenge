@@ -1,3 +1,8 @@
+//--------------------------------------onload
+function consoleLog() {
+    document.querySelector(".loader").classList.add("reveal");
+}
+
 //--------------------------------------scrolling
 let scroll = window.requestAnimationFrame ||
             function(callback) {
@@ -77,10 +82,13 @@ function changeHeight() {
 
 
 changeHeight();
-window.onload = changeHeight;
+
 window.onresize = changeHeight;
 
-
+window.onload = function() {
+    changeHeight();
+    consoleLog();
+};
 //--------------------------------------slider
 
 const leftArrow = document.getElementById("leftarrow");

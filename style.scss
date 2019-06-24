@@ -173,6 +173,24 @@ h2.is-visible {
 }
 
 
+//-------------------------------------loader------------------
+.loader {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black-color;
+    opacity: 1;
+    transition: opacity .5s 0s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.reveal {
+    opacity: 0;
+}
+
+
 //-------------------------------------header------------------
 
 header {
@@ -336,8 +354,7 @@ header {
     }
     
     .svg-container {
-        z-index: -1;
-        
+    
         .blackhalf {
             top: -5vw;
             right: -50vw;
