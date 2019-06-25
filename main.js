@@ -9,13 +9,13 @@ let scroll = window.requestAnimationFrame ||
                 window.setTimeout(callback, 1000/60)
             };
 
-const elementsToShow = document.querySelectorAll('.show-on-scroll');
+const elementsToShow = document.querySelectorAll(".show-on-scroll");
 
 function loop() {
 
   elementsToShow.forEach(function (element) {
     if (isElementInViewport(element)) {
-      element.classList.add('is-visible');
+      element.classList.add("is-visible");
 //    } else {
 //      element.classList.remove('is-visible');
     }
@@ -44,6 +44,16 @@ function isElementInViewport(el) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+
+//--------------------------------------smooth-anchor-scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
 
 //--------------------------------------svgs-sizes
 function changeHeightSmallLeft() {
