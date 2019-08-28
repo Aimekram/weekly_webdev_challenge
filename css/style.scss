@@ -253,7 +253,7 @@ header {
 //-------------------------------------home------------------
 
 .home {
-    background-image: url(images/background_img.png);
+    background-image: url(../images/background_img.png);
     background-color: $primary-color;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -268,7 +268,7 @@ header {
 
     .slogan {
         z-index: 1;
-        background-image: url(images/background_img.png);
+        background-image: url(../images/background_img.png);
         background-clip: text;
         background-size: cover;
         background-position: center;
@@ -485,7 +485,7 @@ header {
         }
     }
     
-    @mixin process-block ($bg-url: "images/process_idea_bg.png") {
+    @mixin process-block ($bg-url: "../images/process_idea_bg.png") {
         background-image: url($bg-url); 
         content: "";
         
@@ -504,16 +504,16 @@ header {
     }
     
     .process_blocks_idea::before {
-        @include process-block ("images/process_idea_bg.png");
+        @include process-block ("../images/process_idea_bg.png");
     }
     
 
     .process_blocks_design::before {
-        @include process-block ("images/process_design_bg.png");
+        @include process-block ("../images/process_design_bg.png");
     }
 
     .process_blocks_output::before {
-        @include process-block ("images/process_output_bg.png");
+        @include process-block ("../images/process_output_bg.png");
     }
 
     

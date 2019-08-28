@@ -262,7 +262,7 @@ header {
         margin: 5px; }
 
 .home {
-  background-image: url(images/background_img.png);
+  background-image: url(../images/background_img.png);
   background-color: #bb2d39;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -276,7 +276,7 @@ header {
   overflow: hidden; }
   .home .slogan {
     z-index: 1;
-    background-image: url(images/background_img.png);
+    background-image: url(../images/background_img.png);
     background-clip: text;
     background-size: cover;
     background-position: center;
@@ -461,7 +461,7 @@ header {
     -ms-transform-origin: top left;
     transform-origin: top left; }
 .process .process_blocks_idea::before {
-  background-image: url("images/process_idea_bg.png");
+  background-image: url("../images/process_idea_bg.png");
   content: "";
   transform: skewX(20deg);
   -ms-transform: skewX(20deg);
@@ -480,7 +480,7 @@ header {
   width: 200%;
   height: 120%; }
 .process .process_blocks_design::before {
-  background-image: url("images/process_design_bg.png");
+  background-image: url("../images/process_design_bg.png");
   content: "";
   transform: skewX(20deg);
   -ms-transform: skewX(20deg);
@@ -499,7 +499,7 @@ header {
   width: 200%;
   height: 120%; }
 .process .process_blocks_output::before {
-  background-image: url("images/process_output_bg.png");
+  background-image: url("../images/process_output_bg.png");
   content: "";
   transform: skewX(20deg);
   -ms-transform: skewX(20deg);
