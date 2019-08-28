@@ -54,6 +54,7 @@ body {
     font-family: $font-stack;
     color: $paragraphs-color;
     text-align: center;
+    overflow-x: hidden;
 }
 
 section {
@@ -278,13 +279,13 @@ header {
         
         @include notselectable;
         
-        width: calc(100vw);
+        width: 100vw;
         height: 100vh;
         
         h2 {
             color: transparent;
             font-family: LemonMilk;
-            font-size: 15vw;
+            font-size: 16vw;
             line-height: 16vw;
             margin: 25vh 0 .5rem 0;            
         }
@@ -721,7 +722,7 @@ footer {
     }
     
     .pure-g {
-        padding-left: 15vw;
+        padding-left: 6vw;
         margin: auto;
         max-width: 1015px;
     }
@@ -748,7 +749,7 @@ footer {
         margin: 2rem 0;
         
         img {
-            margin: 10px;
+            margin: .6rem;
             height: 1.2rem;
         }
     }
@@ -782,6 +783,17 @@ footer {
 
 
 //-------------------------------------media queries-------------
+
+@media only screen and (min-width: 360px) {
+    footer {
+        .pure-g {
+            padding-left: 15vw;
+        }
+        
+
+    }
+}
+
 
 @media only screen and (min-width: 568px) {
     
